@@ -10,7 +10,7 @@ const PolygonComp = (props) => {
       //defaultZoom={12.7}
       defaultZoom={9.7}
       //defaultCenter={{ lat: 49.32416, lng: 8.5679 }}
-      defaultCenter={{ lat: 47.68684, lng: 7.79506 }}
+      defaultCenter={{ lat: 47.68684, lng: 7.67506 }}
       defaultOptions={{ styles: mapStyles }}
     >
       <Polygon
