@@ -7,11 +7,13 @@ import PolygonComp from "./Components/PolygonComp";
 import MapWrapper from "./Components/MapWrapper";
 import Section1 from "./Components/Section1";
 import Section2 from "./Components/Section2";
+import PolylineDecoder from "./Components/PolylineDecoder";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <PolylineDecoder />
       <Section1 />
       <div style={{ width: "100vw", height: "50vh" }}>
         <MapWrapper />
