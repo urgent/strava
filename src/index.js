@@ -1,15 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import "./tailwind.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+const Root = () => (
+	<Fragment>
+				<App />
+	</Fragment>
 );
+
+ReactDOM.render(<Root />, document.getElementById('root'));
 
 document.title = "Strava Dashboard";
 
@@ -17,3 +18,4 @@ document.title = "Strava Dashboard";
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
