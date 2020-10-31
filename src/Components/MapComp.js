@@ -14,24 +14,37 @@ const MapComp = (props) => {
   const [myLat, setMyLat] = useState(48.32416);
   const [myLng, setMyLng] = useState(10.9679);
   const [myZoom, setMyZoom] = useState(4);
+  const [clicked, setClicked] = useState(false);
   const [selectedActivity, setSelectedActivity] = useState(null);
 
   const changeZoomHandler = (zoomNo) => {
     setMyZoom(zoomNo);
   };
 
-  useEffect(() => {
-    const listener = (e) => {
-      if (e.key === "Escape") {
-        setSelectedActivity(null);
-      }
-    };
-    window.addEventListener("keydown", listener);
+  const changeLngHandler = (lng) => {
+    setMyLng(lng);
+  };
 
-    return () => {
-      window.removeEventListener("keydown", listener);
-    };
-  }, []);
+  const changeLatHandler = (lat) => {
+    setMyLat(lat);
+  }
+
+  const clickHandler = (state) => {
+    setClicked(state);
+  }
+
+  // useEffect(() => {
+  //   const listener = (e) => {
+  //     if (e.key === "Escape") {
+  //       setSelectedActivity(null);
+  //     }
+  //   };
+  //   window.addEventListener("keydown", listener);
+
+  //   return () => {
+  //     window.removeEventListener("keydown", listener);
+  //   };
+  // }, []);
 
   return (
     <GoogleMap
@@ -43,13 +56,18 @@ const MapComp = (props) => {
         <Marker
           key={coords.id}
           onClick={() => {
-            console.log(coords.start_latitude);
-            // setMyLat(12);
-            // setMyLng(12);
-            console.log(myZoom);
-            changeZoomHandler(10);
-            console.log(myZoom);
-            //setSelectedActivity(coords);
+            if(!clicked) {
+              changeLngHandler(coords.start_longitude);
+              changeLatHandler(coords.start_latitude);
+              changeZoomHandler(15);
+              clickHandler(true);
+            } else {
+              changeLngHandler(10.9679);
+              changeLatHandler(48.32416);
+              changeZoomHandler(4);
+              clickHandler(false);
+            }
+
           }}
           position={{
             lat: coords.start_latitude,
@@ -62,7 +80,7 @@ const MapComp = (props) => {
         />
       ))}
 
-      {setSelectedActivity && (
+      {/* {setSelectedActivity && (
         <InfoWindow
           onCloseClick={() => {
             setSelectedActivity(null);
@@ -77,7 +95,7 @@ const MapComp = (props) => {
             <p>{selectedActivity.moving_time}</p>
           </div>
         </InfoWindow>
-      )}
+      )} */}
     </GoogleMap>
   );
 };
