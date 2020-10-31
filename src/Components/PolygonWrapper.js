@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { withGoogleMap, withScriptjs } from "react-google-maps";
 import PolygonComp from "./PolygonComp";
 
-const PolygonWrapper = () => {
+const PolygonWrapper = (props) => {
   const MapWrapped = withScriptjs(withGoogleMap(PolygonComp));
 
   return (
