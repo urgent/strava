@@ -1,9 +1,6 @@
 import React from "react";
 
 function Header() {
-  var polyline = require("@mapbox/polyline");
-  polyline.decode("_p~iF~ps|U_ulLnnqC_mqNvxq`@");
-
   return (
     <div className="">
       <div className="bg-gray-200 shadow-lg py-6 px-3">
