@@ -8,7 +8,7 @@ import MapWrapper from "./Components/MapWrapper";
 import Section1 from "./Components/Section1";
 import Section2 from "./Components/Section2";
 import PolylineDecoder from "./Components/PolylineDecoder";
-import DropdownMenu from "./Components/Dropdown";
+import DropdownMenu from "./Components/DropdownMenu";
 
 function App() {
   return (
@@ -20,10 +20,6 @@ function App() {
         <MapWrapper />
       </div>
       <Section2 />
-      <DropdownMenu />
-      <div style={{ width: "100vw", height: "50vh" }}>
-        <PolygonWrapper />
-      </div>
       <Home />
       <Footer />
     </div>
