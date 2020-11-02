@@ -15,7 +15,6 @@ function App() {
     <div className="App">
       <Header />
       <PolylineDecoder />
-      <Section1 />
       <div style={{ width: "100vw", height: "50vh" }}>
         <MapWrapper />
       </div>
