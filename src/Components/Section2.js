@@ -13,6 +13,8 @@ function Section2() {
           <div className="lg:flex items-stretch">
             <div className="rounded-md shadow-md flex-1 text-gray-700 text-center px-4 py-6 my-8 lg:m-2 bg-gray-400">
               *insert PolygonWrapper in this box (40-50% width)*
+              <br />
+              *or csv style table with selection*
             </div>
             <div className="rounded-md shadow-md flex-1 text-gray-700 text-center px-4 py-6 my-8 lg:m-2 bg-gray-400">
               <ActivityDetails />
