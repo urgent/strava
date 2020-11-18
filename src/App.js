@@ -11,18 +11,18 @@ import PolylineDecoder from "./Components/PolylineDecoder";
 import DropdownMenu from "./Components/DropdownMenu";
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <PolylineDecoder />
-      <div style={{ width: "100vw", height: "50vh" }}>
-        <MapWrapper />
-      </div>
-      <Section2 />
-      <Home />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<PolylineDecoder />
+			<div style={{ width: "100vw", height: "50vh" }}>
+				<MapWrapper />
+			</div>
+			<Section2 />
+			<Home />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
