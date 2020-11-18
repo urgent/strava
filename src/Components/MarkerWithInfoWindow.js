@@ -32,6 +32,8 @@ const MarkerWithInfoWindow = (props) => {
           changeZoomHandler(15);
           infoWindowInfoHandler(infoWindowInfo);
           console.log("Clicked Motherfucker");
+          console.log(coords.name);
+          console.log(coords.kilojoules);
         }}
         position={{
           lat: parseFloat(coords.start_latitude),
@@ -42,7 +44,18 @@ const MarkerWithInfoWindow = (props) => {
         {infoWindowInfo && (
           <InfoWindow>
             <div>
-              <p>Hello {coords.id}</p>
+              <p>
+                {coords.name}
+                <br />
+                {Math.floor(coords.moving_time / 3600)}h{" "}
+                {Math.floor((coords.moving_time / 60) % 60)}
+                m
+                <br />
+                {(coords.distance / 1000).toFixed(2)}km
+                <br />
+                {coords.kilojoules}kcal
+                <br />
+              </p>
             </div>
           </InfoWindow>
         )}

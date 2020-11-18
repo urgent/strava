@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, Image } from "react";
 import { myData } from "../data/Strava-all-1-year.js";
+import runIcon from "../images/run.png";
+import bikeIcon from "../images/bike.png";
 
 function ActivityDetails() {
   let uploadID = 3929400589; // TODO: make this selectable via Dropdown
@@ -27,9 +29,28 @@ function ActivityDetails() {
       if (type === "Type") {
         setType(myObject[0].type);
         if (myObject[0].type === "Ride") {
-          //icon of bike
+          function typeSelect() {
+            return (
+              <img
+                src={bikeIcon}
+                height={30}
+                width={30}
+                style={{ margin: "0 auto" }}
+              />
+            );
+          }
         } else if (myObject[0].type === "Run") {
           //icon of runner
+          function typeSelect() {
+            return (
+              <img
+                src={runIcon}
+                height={30}
+                width={30}
+                style={{ margin: "0 auto" }}
+              />
+            );
+          }
         }
       }
 
@@ -101,7 +122,15 @@ function ActivityDetails() {
   return (
     <div className="text-center">
       <div className="text-2xl">{name}</div>
-      <div className="text-m">{type}</div>
+      <div className="text-m">
+        {type}
+        <img
+          src={runIcon}
+          height={30}
+          width={30}
+          style={{ margin: "0 auto" }}
+        />
+      </div>
       <div className="text-sm text-gray-700">
         {date} at {time} o'clock
       </div>
