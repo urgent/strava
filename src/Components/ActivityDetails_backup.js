@@ -121,11 +121,18 @@ function ActivityDetails() {
 
   return (
     <div className="text-center">
+      <div className="text-2xl">{name}</div>
       <div className="text-m">
         {type}
+        <img
+          src={runIcon}
+          height={30}
+          width={30}
+          style={{ margin: "0 auto" }}
+        />
       </div>
       <div className="text-sm text-gray-700">
-        Date: {date} – Time: {time}
+        {date} at {time} o'clock
       </div>
       <div className="lg:flex items-stretch">
         <div className="rounded-md shadow-md flex-1 text-gray-700 text-center px-4 py-6 my-8 lg:m-2 bg-gray-400">
@@ -154,6 +161,8 @@ function ActivityDetails() {
           </div>
           <div className="text-sm text-gray-700">Calories</div>
         </div>
+      </div>
+      <div className="lg:flex items-stretch">
         <div className="rounded-md shadow-md flex-1 text-gray-700 text-center px-4 py-6 my-8 lg:m-2 bg-gray-400">
           <div className="text-2xl">
             {avgHeartRate}
@@ -170,6 +179,8 @@ function ActivityDetails() {
           </div>
           <div className="text-sm text-gray-700">Max heartrate</div>
         </div>
+      </div>
+      <div className="lg:flex items-stretch">
         <div className="rounded-md shadow-md flex-1 text-gray-700 text-center px-4 py-6 my-8 lg:m-2 bg-gray-400">
           <div className="text-2xl">
             {avgSpeed}

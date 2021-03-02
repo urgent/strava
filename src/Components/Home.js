@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function Home() {
   return (
     <div className="">
       <div className="bg-gray-200 shadow-lg py-6 px-3">
@@ -25,4 +25,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Home;

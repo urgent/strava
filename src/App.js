@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import PolygonWrapper from "./Components/PolygonWrapper";
 import PolygonComp from "./Components/PolygonComp";
 import MapWrapper from "./Components/MapWrapper";
+import Section0 from "./Components/Section0";
 import Section1 from "./Components/Section1";
 import Section2 from "./Components/Section2";
 import PolylineDecoder from "./Components/PolylineDecoder";
@@ -18,9 +19,7 @@ function App() {
 			<div style={{ width: "100vw", height: "50vh" }}>
 				<MapWrapper />
 			</div>
-			<Section2 />
-			<Home />
-			<Footer />
+			<Section0 />
 		</div>
 	);
 }
